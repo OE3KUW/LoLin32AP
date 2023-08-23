@@ -11,7 +11,7 @@
 const char* ssid = "LoLin32AP";
 const char* pw = "123456789";
 WiFiServer serverWiFi(80);
-IPAddress lclIP(192,168,2,204);
+IPAddress lclIP(192,168,2,219);
 IPAddress gateway(192,168,2,1);
 IPAddress subnet(255,255,255,0);
 
@@ -65,7 +65,7 @@ void wifiSend(WiFiClient client)
     client.print("<!DOCTYPE HTML>");
     client.print("  <head>");
     client.print("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
-    client.print("    <meta http-equiv=\"refresh\" content=\"5\">");
+    client.print("    <meta http-equiv=\"refresh\" content=\"15\">");
     client.print("    <link rel=\"icon\" href=\"data:,\">");
     client.print("    <title> HTL St.Poelten</title>");
         
