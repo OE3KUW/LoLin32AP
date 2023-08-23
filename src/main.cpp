@@ -9,7 +9,7 @@
 
 #define LED                            5
 const char* ssid = "LoLin32AP";
-const char* pw = "123456789";
+const char* pw = "";                   // frei  ansonsten zB: "123456789";
 WiFiServer serverWiFi(80);
 IPAddress lclIP(192,168,2,219);
 IPAddress gateway(192,168,2,1);
@@ -30,7 +30,7 @@ void setup()
     pinMode(LED, OUTPUT);
     digitalWrite(LED, LOW);  // Led on = LOW
     Serial.println("start: LoLin 32 Access Point! now !");
-    WiFi.softAP(ssid, pw, 1, 0, 8);
+    WiFi.softAP(ssid, pw, 1, 0, 5);  //  5 Teilnehmer gleichzeitig .... 
     delay(1000);
     Serial.println("Zeile 75");
     //IPAddress apIP = WiFi.softAP();
