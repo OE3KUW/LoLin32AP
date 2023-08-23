@@ -70,8 +70,8 @@ void wifiSend(WiFiClient client)
     client.print("    <title> HTL St.Poelten</title>");
         
     client.print("    <style>html { font-family: Arial; display: inline-block; margin: 0px auto; text-align: center;}");
-    client.print("    .buttonON  { background-color: #ff0000; border: none; color: white; padding: 16px 40px; border-radius: 4px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}");
-    client.print("    .buttonOFF { background-color: #00ff00;}");
+    client.print("    .buttonON  { background-color: #ff0000; border: none; color: white; padding: 16px 40px; border-radius: 8px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}");
+    client.print("    .buttonOFF { background-color: #00ff00; border: none; color: white; padding: 16px 40px; border-radius: 8px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}");
     client.print("    </style>");
     client.print("  </head>");
     client.print("  <body>");
