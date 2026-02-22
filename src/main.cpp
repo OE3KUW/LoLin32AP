@@ -32,8 +32,8 @@ void setup()
     Serial.println("start: LoLin 32 Access Point! now !");
     WiFi.softAP(ssid, pw, 1, 0, 5);  //  5 Teilnehmer gleichzeitig .... 
     delay(1000);
-    Serial.println("Zeile 75");
-    //IPAddress apIP = WiFi.softAP();
+    
+    //IPAddress apIP = WiFi.softAP();  wenn man die ip nicht selbst festlegen möchte
 
     WiFi.softAPConfig(lclIP, gateway, subnet);
     digitalWrite(LED, HIGH);
@@ -110,6 +110,7 @@ void wifiReceive(WiFiClient client)
             {
                 if (currentLine.length() == 0)
                 {
+                    Serial.println("\n---->Send:");
                     wifiSend(client);
                     break;
                 }
@@ -125,12 +126,14 @@ void wifiReceive(WiFiClient client)
 
             if (currentLine.endsWith("GET /H"))
             {
+Serial.println("\noff");
                 digitalWrite(LED, HIGH);
                 ledStatus = "off";
             }
 
             if (currentLine.endsWith("GET /L"))
             {
+Serial.println("\non");
                 digitalWrite(LED, LOW);
                 ledStatus = "on";
 
